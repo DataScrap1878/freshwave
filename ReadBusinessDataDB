@@ -1,0 +1,12 @@
+import sqlite3 
+import pandas as pd
+
+conn=sqlite3.connect("business_data.db")
+
+products = pd.read_sql("select * from products", conn)
+final_consolidated = pd.read_sql("select * from final_consolidated", conn)
+
+print(products)
+print(final_consolidated)
+
+conn.close()
