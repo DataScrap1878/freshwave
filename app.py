@@ -26,6 +26,7 @@ def get_salesbycity():
         conn.close()
         return jsonify(salesbycity.to_dict(orient='records'))
 
+"New change to be made by assistant"
 
 if __name__ == "__main__" :
     app.run(debug=True)
